@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Arbol } from '../../models/arbol.model';
 @Component({
   selector: 'app-listbox',
   templateUrl: './listbox.component.html',

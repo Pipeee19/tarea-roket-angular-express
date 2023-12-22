@@ -55,16 +55,11 @@ export class AppComponent {
   }
 
   loadImages(fotos: Foto[]): void {
-    console.log('entre al metodo para cargar fotos');
     this.url_first_image = fotos[0].url_foto;
-
   }
 
   onArbolSelected(selectedArbol: Arbol): void {
     this.getFotosbyArbolId(selectedArbol.arbol_id);
     this.itemClickedMap = selectedArbol;    
-  }
-  enviarComentariosModal(){
-    
   }
 }

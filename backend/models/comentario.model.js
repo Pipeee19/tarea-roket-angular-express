@@ -2,11 +2,12 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db.config');
 
 const Comentario = sequelize.define('arboles', {
-  /*com_id: {
+  com_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
-    primaryKey: true
-  },*/
+    primaryKey: true,
+    autoIncrement: true
+  },
   arbol_id: {
     type: DataTypes.INTEGER,
     allowNull: false

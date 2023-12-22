@@ -23,28 +23,24 @@ export class TextboxComponent {
     modalRef.componentInstance.textoEnviar = 'Enviar comentarios';
 
     modalRef.componentInstance.enviarClick.subscribe(() => {
-      // Lógica a ejecutar cuando se hace clic en el botón de enviar en el modal
       this.enviarComentariosModal();
     });
   }
 
   enviarComentariosModal(): void{
-    console.log('Se hizo clic en Enviar');
     const datos = {
       arbol_id: this.itemSelected.arbol_id,
       comentario: this.comentario,
       postulante_id: 2063
     };
-    console.log("datos")
-    console.log(datos);
 
-    /*this.apiService.postComentario(datos).subscribe(
+    this.apiService.postComentario(datos).subscribe(
       (respuesta) => {
         console.log('Respuesta del servidor:', respuesta);
       },
       (error) => {
         console.error('Error en la solicitud:', error);
       }
-    );*/
+    );
   }
 }

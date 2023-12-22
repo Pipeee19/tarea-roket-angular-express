@@ -1,6 +1,5 @@
 import { UbicacionData } from "../interface/ubicacionData.interface";
 
-
 export class Arbol {
     arbol_id: number;
     nombre_arbol: string;

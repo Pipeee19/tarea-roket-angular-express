@@ -9,7 +9,6 @@ import { ImageboxComponent } from './components/imagebox/imagebox.component';
 import { MapboxComponent } from './components/mapbox/mapbox.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -21,7 +20,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ImageboxComponent,
     MapboxComponent,
     HeaderComponent,
-    FooterComponent,
     ModalComponent
   ],
   imports: [

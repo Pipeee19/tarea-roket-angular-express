@@ -7,7 +7,7 @@ exports.postComentario = async (req, res) => {
         arbol_id: datos.arbol_id,
         comentario: datos.comentario,
         postulante_id: datos.postulante_id
-      });
+      }, { returning: false });
       res.status(200).json({ mensaje: 'Inserción exitosa', comentario });
     } catch (error) {
       console.error(error);

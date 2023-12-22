@@ -25,15 +25,18 @@ export class MapboxComponent {
   }
 
   initMap() {
+    const myIcon = L.icon({
+      iconUrl: '../../../assets/img/icons/mapMarker.png',
+      iconSize: [45, 50],
+   });
     this.map = L.map('map').setView([this.itemSelected.ubicacion.latitud, this.itemSelected.ubicacion.longitud],5);
-    L.marker([this.itemSelected.ubicacion.latitud, this.itemSelected.ubicacion.longitud])
+    L.marker([this.itemSelected.ubicacion.latitud, this.itemSelected.ubicacion.longitud], {icon: myIcon})
     .addTo(this.map)
     .bindPopup(this.itemSelected.nombre_arbol)
     .openPopup();
-    //console.log(this.items)
     this.items.forEach((arbol)=>{
       const {ubicacion} = arbol
-      const marker = L.marker([ubicacion.latitud, ubicacion.longitud])
+      const marker = L.marker([ubicacion.latitud, ubicacion.longitud], {icon: myIcon})
       .addTo(this.map)      
       marker.on('click', (event) => {
         this.onMarkerClick(event);
@@ -51,12 +54,8 @@ export class MapboxComponent {
     const arbolesClicados: Arbol[] = this.items.filter(arbol => arbol.ubicacion.latitud == lat && arbol.ubicacion.longitud == lng);
     if (arbolesClicados.length > 0) {
       const arbolClicado: Arbol = arbolesClicados[0];
-      console.log('Objeto clicado:', arbolClicado);
       // Emitir el árbol seleccionado al componente Listbox
       this.selectedObject.emit(arbolClicado);
-    } else {
-      console.log('Ningún objeto encontrado en la ubicación clicada.');
-    }
-
+    } else return
   }
 }
