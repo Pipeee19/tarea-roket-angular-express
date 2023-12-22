@@ -1,0 +1,23 @@
+.image-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+  
+.image-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+.center-content {
+  text-align: center;
+}
+
+img{
+  text-align: center;
+}
+.image-container {
+  width: 100%; /* O el ancho que desees */
+  height: 600px; /* O la altura que desees */
+  object-fit: contain; /* Otra opción podría ser 'cover' dependiendo de tus necesidades */
+}

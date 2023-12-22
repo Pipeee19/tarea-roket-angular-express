@@ -1,0 +1,14 @@
+<div class="image-box">
+    <div class="center-content">
+        <img [src]="url_image" alt="IMAGEN-ARBOL" class="image-container"> 
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md center-content">
+            <button type="button" class="btn btn-success" [disabled] = "index == 0"  (click)="retrocederFoto()"><i class="fa-solid fa-circle-chevron-left"></i></button>
+        </div>
+        <div class="col-md center-content">
+            <button type="button" class="btn btn-success" [disabled] = "index == images.length-1"(click)="avanzarFoto()"><i class="fa-solid fa-circle-chevron-right"></i></button> 
+        </div>
+    </div>
+</div>

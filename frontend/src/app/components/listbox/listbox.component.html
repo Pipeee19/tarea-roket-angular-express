@@ -1,0 +1,12 @@
+<div class="form-group">
+  <label for="listboxDropdown" class="font-weight-bold text-black">{{ titulo }}</label>
+  <div class="col-md">
+    <div class="form-floating">
+      <select class="form-select" id="listboxDropdown" [(ngModel)]="selectedItem" (change)="onSelectionChange()">
+        <option *ngFor="let item of items" [ngValue]="item">
+          {{ item.nombre_arbol }}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>

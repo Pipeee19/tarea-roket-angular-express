@@ -1,0 +1,6 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+@font-face {
+    font-family: 'Karmatic Arcade';
+    src: url('../src/assets/fonts/karmatic-arcade.ttf') format('truetype');
+}

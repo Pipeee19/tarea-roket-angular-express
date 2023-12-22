@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="container" style="min-height: 600px;">
+  <div class="row">
+    <div class="col">
+      <app-listbox [titulo]="'Seleccione un arbol'" [itemClicked]="itemClickedMap" [items]="arboles" (selectedObject)="onArbolSelected($event)"></app-listbox>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngIf="showLoader"   class="spinner-border container mt-4 mb-4 " role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div *ngIf="showMapImage"  class="col-4">
+      <app-imagebox [images]="fotos" [url_image]="url_first_image"></app-imagebox>
+    </div>
+    <div *ngIf="showMapImage"  class="col-8">
+      <app-mapbox [itemSelected]="itemClickedMap"  [items]="arboles" (selectedObject)="onArbolSelected($event)"></app-mapbox>
+    </div>
+  </div>
+  <br>
+  <div class="row" *ngIf="showMapImage">
+    <app-textbox [itemSelected]="itemClickedMap" ></app-textbox>    
+  </div>
+</div>
